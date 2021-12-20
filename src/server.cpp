@@ -256,7 +256,7 @@ int main()
 				}
 
 				for (int id = 0; id < tcp.GetTotalAccept(); id++) {
-					tcp.Send(reinterpret_cast<char*>(&data), sizeof Data, id);
+					tcp.Send(reinterpret_cast<char*>(&data), sizeof(Data), id);
 				}
 			}
 
@@ -288,11 +288,11 @@ int main()
 				if (!is_id)
 				{
 					for (id = 0; id < tcp.GetTotalAccept(); id++) {
-						tcp.Send(reinterpret_cast<char*>(&data), sizeof Data, id);
+						tcp.Send(reinterpret_cast<char*>(&data), sizeof(Data), id);
 					}
 				}
 				else {
-					tcp.Send(reinterpret_cast<char*>(&data), sizeof Data, id);
+					tcp.Send(reinterpret_cast<char*>(&data), sizeof(Data), id);
 				}
 			}
 
